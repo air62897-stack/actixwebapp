@@ -1,0 +1,52 @@
+[package]
+name = "actix-web-app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = { version = "4.4", features = ["openssl"] }
+openssl = { version = "0.10", features = ["v110"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0.196"
+cargo-watch = "8.5.2"
+actix-multipart = "0.6.1"
+futures = "0.3"
+swagger-ui =  "0.1"
+actix-files = "0.5"
+actix-utils = "3.0"
+log = "0.4.0"
+env_logger = "0.9.0"
+tower = "0.4"
+futures-util = "0.3.30"
+
+#[dev-dependencies]
+actix-http = "3.5.0"
+async-trait = "0.1.77"
+serde_json = "1.0.113"
+hyper = "1.1"
+bytes = "1.5.0"
+derive_more = "0.99.17"
+
+# db
+sqlx = { version = "0.6.2", features = ["runtime-async-std-native-tls", "mysql", "chrono", "uuid"] }
+uuid = { version = "1.7.0", features = ["serde", "v4"] }
+chrono = { version = "0.4.23", features = ["serde"] }
+lazy_static = "1.4.0"
+once_cell = "1.19.0"
+jsonwebtoken = "9.2.0"
+rand = "0.8.5"
+base64 = "0.21.7"
+http = "0.2.11"
+diesel = { version = "2.1", features = ["mysql"] }
+
+# gridfs
+#mongodb = "2.0"
+
+#[dependencies.mongodb]
+#version = "2.8.1"
+#default-features = false
+#features = ["async-std-runtime"]
+mongodb = "2.8"
+mongodb-gridfs = "0.2"
